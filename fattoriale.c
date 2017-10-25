@@ -2,30 +2,29 @@
 #include<math.h>
 
 int main(){
-	int n,i,fat=1;
+	int n,fat;
         
 	do{
 		printf("Inserisci un numero non negativo: ");
 		scanf("%d",&n);
 	}while(n<0);
 
-	i=n;
+	fat=n;
+	
         
 	if(n==0)
 		printf("n! = 1\n");
 
 	else
 	    {
-		    while(i>1){
+		    while(n>1){
 			   
-			   fat=fat*(n*(i-1));
-			   n=1;
-		           i--;	
+			   fat=fat*(n-1);
+		           n--;
 		    }
-	    }
-
+	    
 	printf("Il fattoriale e':%d\n",fat);
-
+	    }
 
 return 0;
 }
