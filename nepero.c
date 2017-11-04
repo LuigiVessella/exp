@@ -1,29 +1,14 @@
 #include<stdio.h>
 
 int main(){
-	int fat, n=0, i, cifra=0, ver;
+	int fat=1, i;
         double ris=1.0;
 
 	for(i=2; i<11; i++){
-		n=i;
-		fat=1;
-		ver=cifra;
-		cifra=0;
-		while(n>1){
-		        fat=fat*(n-1);
-			n--;
-		}
 	
+		fat=fat*i;	
 		ris=ris+(1./(double)fat);
-		printf("e: %f\n",ris);        
-		cifra=(double)ris%10.;
-		
-	
-		if(i>3 && cifra==ver)
-		       	break;
-		
-		printf("cifra: %d\n", cifra);
-		
+		printf("e: %f\n",ris);     
 	}
 
 return 0;
